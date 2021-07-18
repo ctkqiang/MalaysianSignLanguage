@@ -46,7 +46,7 @@ public class SplashActivity extends AppCompatActivity
     /**
      * @param bundle Current State Instance
      *               On Navigate to
-     *               {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MainActivity}
+     *               {@link MalaysianSignLanguageActivity}
      */
     public void on_intent(Bundle bundle)
     {
@@ -55,7 +55,7 @@ public class SplashActivity extends AppCompatActivity
             @Override
             public void run()
             {
-                ComponentFunctions.route_to(SplashActivity.this, MainActivity.class);
+                ComponentFunctions.route_to(SplashActivity.this, MalaysianSignLanguageActivity.class);
 
                 finish();
             }

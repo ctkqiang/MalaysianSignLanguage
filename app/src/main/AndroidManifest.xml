@@ -14,7 +14,7 @@
         tools:ignore="AllowBackup">
 
         <activity android:name=".activities.WebViewActivity" />
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.MalaysianSignLanguageActivity" />
         <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
 
-public class MainActivity extends AppCompatActivity
+public class MalaysianSignLanguageActivity extends AppCompatActivity
 {
 
     @Override
