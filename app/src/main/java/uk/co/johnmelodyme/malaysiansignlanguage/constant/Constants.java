@@ -26,6 +26,11 @@ public class Constants
 
     /**
      * Defines several constants used between
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MalaysianSignLanguageActivity}
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.WebViewActivity}
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.SplashActivity}
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.functions.ComponentFunctions}
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions}
      */
 
     /* Debugging */
@@ -38,6 +43,9 @@ public class Constants
     public static String WARN_LEVEL = "[WARNING] -> ";
     public static String VERBOSE_LEVEL = "[VERBOSE] -> ";
 
-    /* Splash Screen Time OUt Set To Be 3000 m/s */
-    public static int SPLASH_SCREEN_TIME_OUT = 0xbb8;
+    public static String DEV_PROFILE_URL = "https://tinyurl.com/johnmelodyme";
+    public static String FORUM_URL = "https://tinyurl.com/33umw6jf";
+
+    /* Splash Screen Time OUt Set To Be 2000 m/s */
+    public static int SPLASH_SCREEN_TIME_OUT = 0x7d0;
 }

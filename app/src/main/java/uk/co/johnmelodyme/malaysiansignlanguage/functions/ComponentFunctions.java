@@ -1,10 +1,12 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.functions;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -66,5 +68,33 @@ public class ComponentFunctions extends Functions
         log_output("render_bottom_navigation/1", 0, LogLevel.DEBUG);
 
         activity.getWindow().setNavigationBarColor(ContextCompat.getColor(activity.getApplicationContext(), R.color.main));
+    }
+
+    /**
+     * @param title   The Title Of the Alert dialogue
+     * @param message The content of the dialogue
+     * @param context current User's instance
+     */
+    public static void alert_prompt(String title, String message, Context context)
+    {
+        log_output("alert_prompt/3", 0, LogLevel.DEBUG);
+
+        AlertDialog.Builder builder;
+        builder = new AlertDialog.Builder(context);
+        builder.setMessage(message).setCancelable(true).setNegativeButton(
+                context.getResources().getString(R.string.ok),
+                (dialog, which) -> dialog.cancel()
+        ).setTitle(title).show();
+    }
+
+    /**
+     * @param activity current User activity Component
+     *                 Render Back Button For Action Bar
+     */
+    public static void render_back_button_action_bar(AppCompatActivity activity)
+    {
+        log_output("render_back_button_action_bar/1", 0, LogLevel.DEBUG);
+
+        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
