@@ -1,5 +1,6 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.components;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,8 +42,8 @@ public class CategoryAdapter extends ArrayAdapter<String>
 
     /**
      * @param activity The Current activity
-     * @param title   The User Input Title of Categories
-     * @param image   The User Input Image of Categories
+     * @param title    The User Input Title of Categories
+     * @param image    The User Input Image of Categories
      */
     public CategoryAdapter(@NonNull Activity activity, String[] title, int[] image)
     {
@@ -52,6 +53,7 @@ public class CategoryAdapter extends ArrayAdapter<String>
         this.image = image;
     }
 
+    @SuppressLint({"InflateParams", "ViewHolder"})
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
@@ -60,7 +62,7 @@ public class CategoryAdapter extends ArrayAdapter<String>
         LayoutInflater layoutInflater;
 
         layoutInflater = activity.getLayoutInflater();
-        view = layoutInflater.inflate(R.layout.category_item, null , true);
+        view = layoutInflater.inflate(R.layout.category_item, null, true);
 
         TextView title = (TextView) view.findViewById(R.id.category_title);
         ImageView image = (ImageView) view.findViewById(R.id.category_image);
