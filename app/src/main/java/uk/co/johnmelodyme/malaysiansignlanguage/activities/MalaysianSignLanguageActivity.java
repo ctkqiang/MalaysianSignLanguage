@@ -1,6 +1,7 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.activities;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
+import uk.co.johnmelodyme.malaysiansignlanguage.activities.categories.AlphabetsActivity;
 import uk.co.johnmelodyme.malaysiansignlanguage.components.CategoryAdapter;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.Constants;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
@@ -71,23 +73,24 @@ public class MalaysianSignLanguageActivity extends AppCompatActivity
             {
                 Functions.log_output("list_view_onclicked:/4", 0, LOG_LEVEL);
 
+                Context context = MalaysianSignLanguageActivity.this;
+
                 switch (position)
                 {
                     case 0:
                     {
-                        ComponentFunctions.show_snack_bar(view, "0");
+                        Functions.route_to(context, AlphabetsActivity.class);
                         break;
                     }
 
                     case 1:
                     {
-                        ComponentFunctions.show_snack_bar(view, "1");
                         break;
                     }
 
                     default:
                     {
-                        ComponentFunctions.show_snack_bar(view, "?");
+                        ComponentFunctions.show_snack_bar(view, "?? ->" + position);
                         break;
                     }
 

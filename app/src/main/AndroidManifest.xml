@@ -13,7 +13,6 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/app_main"
@@ -22,7 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalaysianSignLanguage"
         tools:ignore="AllowBackup">
-
+        <activity android:name=".activities.ContentDisplayActivity"></activity>
+        <activity
+            android:name=".activities.categories.AlphabetsActivity"
+            android:parentActivityName=".activities.MalaysianSignLanguageActivity" />
         <activity
             android:name=".activities.WebViewActivity"
             android:parentActivityName=".activities.MalaysianSignLanguageActivity" />

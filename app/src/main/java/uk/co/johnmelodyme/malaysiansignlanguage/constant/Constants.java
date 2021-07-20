@@ -63,20 +63,20 @@ public class Constants
             "Numbers",
             "Greetings",
             "Questions",
-//            "Adjectives",
-//            "Colours",
-//            "Family",
-//            "Time",
-//            "Nature",
-//            "Date",
-//            "Religion & Culture",
-//            "Public Holidays",
-//            "Animals",
-//            "Food & Beverages",
-//            "Health & Medicine",
-//            "Establishments",
-//            "Sentiments",
-//            "States in Malaysia"
+            "Adjectives",
+            "Colours",
+            "Family",
+            "Time",
+            "Nature",
+            "Date",
+            "Religion & Culture",
+            "Public Holidays",
+            "Animals",
+            "Food & Beverages",
+            "Health & Medicine",
+            "Establishments",
+            "Sentiments",
+            "States in Malaysia"
     };
 
     public static int[] category_image = {
@@ -84,6 +84,19 @@ public class Constants
             R.mipmap.numbers,
             R.mipmap.greeting,
             R.mipmap.questions,
-
+            R.mipmap.adjectives,
+            R.mipmap.colours,
+            R.mipmap.family,
+            R.mipmap.time,
+            R.mipmap.nature,
+            R.mipmap.date,
+            R.mipmap.religion,
+            R.mipmap.holiday,
+            R.mipmap.animals,
+            R.mipmap.fnb,
+            R.mipmap.health,
+            R.mipmap.establishments,
+            R.mipmap.sentiments,
+            R.mipmap.malaysianstates
     };
 }
