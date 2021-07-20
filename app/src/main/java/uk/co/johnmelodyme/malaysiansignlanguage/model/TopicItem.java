@@ -2,6 +2,8 @@ package uk.co.johnmelodyme.malaysiansignlanguage.model;
 
 import android.graphics.Bitmap;
 
+import androidx.annotation.NonNull;
+
 /**
  * @author Johnmelodyme
  * <p>
@@ -23,21 +25,21 @@ import android.graphics.Bitmap;
 
 public class TopicItem
 {
-    public Bitmap topic_image;
+    public int topic_image;
     public String topic_title;
 
-    public TopicItem(Bitmap topic_image, String topic_title)
+    public TopicItem(int topic_image, String topic_title)
     {
         this.topic_image = topic_image;
         this.topic_title = topic_title;
     }
 
-    public Bitmap getTopic_image()
+    public int getTopic_image()
     {
         return topic_image;
     }
 
-    public void setTopic_image(Bitmap topic_image)
+    public void setTopic_image(int topic_image)
     {
         this.topic_image = topic_image;
     }
@@ -50,5 +52,33 @@ public class TopicItem
     public void setTopic_title(String topic_title)
     {
         this.topic_title = topic_title;
+    }
+
+    /**
+     * Returns a string representation of the object. In general, the
+     * {@code toString} method returns a string that
+     * "textually represents" this object. The result should
+     * be a concise but informative representation that is easy for a
+     * person to read.
+     * It is recommended that all subclasses override this method.
+     * <p>
+     * The {@code toString} method for class {@code Object}
+     * returns a string consisting of the name of the class of which the
+     * object is an instance, the at-sign character `{@code @}', and
+     * the unsigned hexadecimal representation of the hash code of the
+     * object. In other words, this method returns a string equal to the
+     * value of:
+     * <blockquote>
+     * <pre>
+     * getClass().getName() + '@' + Integer.toHexString(hashCode())
+     * </pre></blockquote>
+     *
+     * @return a string representation of the object.
+     */
+    @NonNull
+    @Override
+    public String toString()
+    {
+        return super.toString();
     }
 }

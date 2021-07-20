@@ -3,8 +3,12 @@ package uk.co.johnmelodyme.malaysiansignlanguage.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.GridView;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
+import uk.co.johnmelodyme.malaysiansignlanguage.components.TopicAdapter;
+import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
+import uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions;
 
 /**
  * @author Johnmelodyme
@@ -27,11 +31,26 @@ import uk.co.johnmelodyme.malaysiansignlanguage.R;
 
 public class ContentDisplayActivity extends AppCompatActivity
 {
+    public final LogLevel LOG_LEVEL = LogLevel.DEBUG;
+    public GridView gridView;
+    public TopicAdapter topicAdapter;
+
+
+    public void render_user_components(Bundle bundle)
+    {
+        Functions.log_output("render_user_components/1", 0, LOG_LEVEL);
+
+        gridView = (GridView) findViewById(R.id.alphabet_layout);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_display);
+
+        /* Render User Components */
+        render_user_components(savedInstanceState);
+
     }
 }

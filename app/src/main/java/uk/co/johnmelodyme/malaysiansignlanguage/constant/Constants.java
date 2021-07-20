@@ -101,4 +101,35 @@ public class Constants
             R.mipmap.sentiments,
             R.mipmap.malaysianstates
     };
+
+    public static String[] alphabets_title = {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"
+    };
+
+    public static int[] alphabet_image = {};
 }
