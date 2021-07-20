@@ -62,7 +62,7 @@ public class Constants
             "Alphabets",
             "Numbers",
             "Greetings",
-//            "Questions",
+            "Questions",
 //            "Adjectives",
 //            "Colours",
 //            "Family",
@@ -83,5 +83,7 @@ public class Constants
             R.mipmap.alphabet,
             R.mipmap.numbers,
             R.mipmap.greeting,
+            R.mipmap.questions,
+
     };
 }

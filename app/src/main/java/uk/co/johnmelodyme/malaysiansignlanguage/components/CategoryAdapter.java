@@ -39,7 +39,6 @@ public class CategoryAdapter extends ArrayAdapter<String>
     public String[] title;
     public int[] image;
 
-
     /**
      * @param activity The Current activity
      * @param title   The User Input Title of Categories
