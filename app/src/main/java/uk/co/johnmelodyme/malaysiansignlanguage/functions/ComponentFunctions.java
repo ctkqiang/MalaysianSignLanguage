@@ -1,5 +1,8 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.functions;
 
+import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
@@ -9,11 +12,13 @@ import android.view.View;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
+import uk.co.johnmelodyme.malaysiansignlanguage.constant.Constants;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
 
 /**
@@ -111,5 +116,48 @@ public class ComponentFunctions extends Functions
         log_output("show_snack_bar/2", 0, LogLevel.DEBUG);
 
         Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show();
+    }
+
+    /**
+     * @param activity The User Current Activity
+     * @param resource The Resources {@code R.mipmap.{#SOMETHING}}
+     * @param title    #required User Input Title
+     * @param text     #required User Input Text
+     */
+    public static void show_notification(Activity activity, int resource, String title, String text)
+    {
+        log_output("show_notification/5", 0, LogLevel.DEBUG);
+        NotificationManager notification_manager;
+        NotificationChannel notificationChannel;
+        NotificationCompat.Builder builder;
+
+        notification_manager = (NotificationManager) activity.getSystemService(
+                Context.NOTIFICATION_SERVICE)
+        ;
+
+        builder = new NotificationCompat.Builder(activity, Constants.NOTIFICATION_CHANNEL_ID);
+        builder.setContentTitle(title);
+        builder.setContentText(text);
+        builder.setSmallIcon(resource);
+        builder.setAutoCancel(true);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O)
+        {
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+
+            notificationChannel = new NotificationChannel(
+                    NOTIFICATION_CHANNEL_ID, "NOTIFICATION", importance
+            );
+
+            builder.setChannelId(Constants.NOTIFICATION_CHANNEL_ID);
+
+            assert notification_manager != null;
+
+            notification_manager.createNotificationChannel(notificationChannel);
+        }
+
+        assert notification_manager != null;
+
+        notification_manager.notify((int) System.currentTimeMillis(), builder.build());
     }
 }

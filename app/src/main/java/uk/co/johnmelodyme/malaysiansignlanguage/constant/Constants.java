@@ -50,6 +50,8 @@ public class Constants
     public static String DEV_PROFILE_URL = "https://tinyurl.com/johnmelodyme";
     public static String FORUM_URL = "https://tinyurl.com/33umw6jf";
 
+    public static String NOTIFICATION_CHANNEL_ID = "default";
+
     /* Splash Screen Time OUt Set To Be 2000 m/s */
     public static int SPLASH_SCREEN_TIME_OUT = 0x7d0;
 
