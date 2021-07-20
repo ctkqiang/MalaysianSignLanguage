@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".activities.MalaysianSignLanguageActivity">
 
-    <GridLayout
+    <ListView
         android:id="@+id/category"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:numColumns="auto_fit" />
 
 </RelativeLayout>

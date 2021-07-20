@@ -46,7 +46,7 @@ public class Functions extends Constants
 {
     public static String TAG = TAG_NAME;
 
-    public static void log_output(@NonNull String string, int ok, LogLevel logLevel)
+    public static void log_output(@NonNull String string, int _status_, LogLevel logLevel)
     {
         switch (logLevel)
         {
@@ -56,7 +56,7 @@ public class Functions extends Constants
             case VERBOSE:
             case WARN:
             {
-                if (ok == 0)
+                if (_status_ == 0)
                 {
                     Log.d(TAG, logLevel.toString() + " {:ok " + string + "}");
                 }

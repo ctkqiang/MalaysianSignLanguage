@@ -1,5 +1,8 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.constant;
 
+import uk.co.johnmelodyme.malaysiansignlanguage.R;
+import uk.co.johnmelodyme.malaysiansignlanguage.components.CategoryAdapter;
+
 /**
  * @author John Melody Me <johnmelody@dingtalk.com>
  * <p>
@@ -29,7 +32,7 @@ public class Constants
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MalaysianSignLanguageActivity}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.WebViewActivity}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.SplashActivity}
-     * {@link uk.co.johnmelodyme.malaysiansignlanguage.components.SignLanguageAdapter}
+     * {@link CategoryAdapter}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.functions.ComponentFunctions}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions}
      */
@@ -51,27 +54,34 @@ public class Constants
     public static int SPLASH_SCREEN_TIME_OUT = 0x7d0;
 
     /**
-     *  Category Of Malaysian Sign Language on the
-     *  {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MalaysianSignLanguageActivity}
+     * Category Title and Image
+     * Of Malaysian Sign Language on the
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MalaysianSignLanguageActivity}
      */
-    public static String[] categories = {
+    public static String[] category_title = {
             "Alphabets",
             "Numbers",
             "Greetings",
-            "Questions",
-            "Adjectives",
-            "Colours",
-            "Family",
-            "Time",
-            "Nature",
-            "Date",
-            "Religion & Culture",
-            "Public Holidays",
-            "Animals",
-            "Food & Beverages",
-            "Health & Medicine",
-            "Establishments",
-            "Sentiments",
-            "States in Malaysia"
+//            "Questions",
+//            "Adjectives",
+//            "Colours",
+//            "Family",
+//            "Time",
+//            "Nature",
+//            "Date",
+//            "Religion & Culture",
+//            "Public Holidays",
+//            "Animals",
+//            "Food & Beverages",
+//            "Health & Medicine",
+//            "Establishments",
+//            "Sentiments",
+//            "States in Malaysia"
+    };
+
+    public static int[] category_image = {
+            R.mipmap.alphabet,
+            R.mipmap.numbers,
+            R.mipmap.greeting,
     };
 }

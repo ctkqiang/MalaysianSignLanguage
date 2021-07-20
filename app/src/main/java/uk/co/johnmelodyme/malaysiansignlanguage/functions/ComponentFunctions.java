@@ -4,11 +4,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
@@ -96,5 +99,17 @@ public class ComponentFunctions extends Functions
         log_output("render_back_button_action_bar/1", 0, LogLevel.DEBUG);
 
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    /**
+     * @param view    Get User's Current View Components
+     * @param message User Custom input value
+     *                #Required
+     */
+    public static void show_snack_bar(View view, String message)
+    {
+        log_output("show_snack_bar/2", 0, LogLevel.DEBUG);
+
+        Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show();
     }
 }

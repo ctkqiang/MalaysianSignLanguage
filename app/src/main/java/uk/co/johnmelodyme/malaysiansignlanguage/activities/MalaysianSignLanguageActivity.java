@@ -1,18 +1,25 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
+import uk.co.johnmelodyme.malaysiansignlanguage.components.CategoryAdapter;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.Constants;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
 import uk.co.johnmelodyme.malaysiansignlanguage.functions.ComponentFunctions;
 import uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions;
+import uk.co.johnmelodyme.malaysiansignlanguage.model.CategoryItem;
 
 
 /**
@@ -37,10 +44,57 @@ import uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions;
 public class MalaysianSignLanguageActivity extends AppCompatActivity
 {
     public final LogLevel LOG_LEVEL = LogLevel.DEBUG;
+    public CategoryAdapter categoryAdapter;
+    public ListView listview;
 
     public void render_user_components(Bundle bundle)
     {
         Functions.log_output("render_user_components/1", 0, LOG_LEVEL);
+
+        listview = (ListView) findViewById(R.id.category);
+
+        /* Assign ArrayList item into Adapter */
+        categoryAdapter = new CategoryAdapter(
+                this,
+                Constants.category_title,
+                Constants.category_image
+        );
+
+        /* Append Adapter into ListView*/
+        listview.setAdapter(categoryAdapter);
+
+        /* Set list view items OnClickEvent */
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                Functions.log_output("list_view_onclicked:/4", 0, LOG_LEVEL);
+
+                switch (position)
+                {
+                    case 0:
+                    {
+                        ComponentFunctions.show_snack_bar(view, "0");
+                        break;
+                    }
+
+                    case 1:
+                    {
+                        ComponentFunctions.show_snack_bar(view, "1");
+                        break;
+                    }
+
+                    default:
+                    {
+                        ComponentFunctions.show_snack_bar(view, "?");
+                        break;
+                    }
+
+                }
+            }
+        });
+
     }
 
     @Override
@@ -103,7 +157,8 @@ public class MalaysianSignLanguageActivity extends AppCompatActivity
             }
 
             case R.id.forum:
-            {                Functions.log_output("menu_forum/0", 0, LOG_LEVEL);
+            {
+                Functions.log_output("menu_forum/0", 0, LOG_LEVEL);
 
                 Functions.parse_url(Constants.FORUM_URL, this, WebViewActivity.class);
 
