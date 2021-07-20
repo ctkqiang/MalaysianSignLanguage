@@ -29,8 +29,6 @@ import uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions;
 
 public class DatabaseHandler extends SQLiteOpenHelper
 {
-
-
     /* SQLite Local Database Helper Configuration */
     public static int database_version = 0x1;
 
