@@ -29,6 +29,7 @@ public class Constants
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MalaysianSignLanguageActivity}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.WebViewActivity}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.SplashActivity}
+     * {@link uk.co.johnmelodyme.malaysiansignlanguage.components.SignLanguageAdapter}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.functions.ComponentFunctions}
      * {@link uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions}
      */
@@ -48,4 +49,29 @@ public class Constants
 
     /* Splash Screen Time OUt Set To Be 2000 m/s */
     public static int SPLASH_SCREEN_TIME_OUT = 0x7d0;
+
+    /**
+     *  Category Of Malaysian Sign Language on the
+     *  {@link uk.co.johnmelodyme.malaysiansignlanguage.activities.MalaysianSignLanguageActivity}
+     */
+    public static String[] categories = {
+            "Alphabets",
+            "Numbers",
+            "Greetings",
+            "Questions",
+            "Adjectives",
+            "Colours",
+            "Family",
+            "Time",
+            "Nature",
+            "Date",
+            "Religion & Culture",
+            "Public Holidays",
+            "Animals",
+            "Food & Beverages",
+            "Health & Medicine",
+            "Establishments",
+            "Sentiments",
+            "States in Malaysia"
+    };
 }

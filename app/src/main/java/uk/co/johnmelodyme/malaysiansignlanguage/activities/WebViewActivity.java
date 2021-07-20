@@ -114,7 +114,7 @@ public class WebViewActivity extends AppCompatActivity
     }
 
     /**
-     * Called when the activity has detected the user's press of the back
+     * Called when the activity h as detected the user's press of the back
      * key. The {@link #getOnBackPressedDispatcher() OnBackPressedDispatcher} will be given a
      * chance to handle the back button before the default behavior of
      * {@link Activity#onBackPressed()} is invoked.
