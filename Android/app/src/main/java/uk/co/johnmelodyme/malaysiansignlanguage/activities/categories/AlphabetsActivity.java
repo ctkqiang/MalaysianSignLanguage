@@ -14,6 +14,7 @@ import uk.co.johnmelodyme.malaysiansignlanguage.R;
 import uk.co.johnmelodyme.malaysiansignlanguage.components.TopicAdapter;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.Constants;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
+import uk.co.johnmelodyme.malaysiansignlanguage.functions.ComponentFunctions;
 import uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions;
 import uk.co.johnmelodyme.malaysiansignlanguage.model.TopicItem;
 
@@ -78,6 +79,9 @@ public class AlphabetsActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabets);
+
+        /* Disable Dark Mode */
+        ComponentFunctions.disable_dark_mode();
 
         /* Render User Components */
         render_user_components(savedInstanceState);

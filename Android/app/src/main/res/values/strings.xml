@@ -2,7 +2,7 @@
     <string name="app_name">Malaysian Sign Language</string>
     <string name="about">About</string>
     <string name="ok">Okay</string>
-    <string name="about_dev">This Application is developed by <a href="johnmelodyme.github.io/">John Melody Me</a> contribute to the Malaysian Sign Language Community.</string>
+    <string name="about_dev">This Application is developed by \n<a href="johnmelodyme.github.io/">John Melody Me</a> contribute to the\nMalaysian Sign Language Community.</string>
     <string name="report_issue">Report Issue</string>
     <string name="support">Other apps</string>
     <string name="forum">"Community forum "</string>

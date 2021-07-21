@@ -12,6 +12,7 @@ import android.view.View;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
@@ -159,5 +160,12 @@ public class ComponentFunctions extends Functions
         assert notification_manager != null;
 
         notification_manager.notify((int) System.currentTimeMillis(), builder.build());
+    }
+
+    public static void disable_dark_mode()
+    {
+        log_output("disable_dark_mode/0", 0, LogLevel.DEBUG);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 }

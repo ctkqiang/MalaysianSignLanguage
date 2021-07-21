@@ -106,6 +106,9 @@ public class MalaysianSignLanguageActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* Disable Dark Mode */
+        ComponentFunctions.disable_dark_mode();
+
         /* Render Action Bar */
         ComponentFunctions.render_action_bar(this, savedInstanceState);
 
@@ -167,6 +170,16 @@ public class MalaysianSignLanguageActivity extends AppCompatActivity
 
                 break;
 
+            }
+
+            case R.id.support:
+            {
+
+                Functions.log_output("menu_support/0", 0, LOG_LEVEL);
+
+                Functions.parse_url(Constants.DEV_PROFILE_URL, this, WebViewActivity.class);
+
+                break;
             }
 
             default:

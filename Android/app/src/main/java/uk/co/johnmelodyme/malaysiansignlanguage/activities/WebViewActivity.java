@@ -1,10 +1,15 @@
 package uk.co.johnmelodyme.malaysiansignlanguage.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -89,6 +94,9 @@ public class WebViewActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
 
+        /* Disable Dark Mode */
+        ComponentFunctions.disable_dark_mode();
+
         /* Render Back Button :: Action Bar */
         ComponentFunctions.render_back_button_action_bar(this);
 
@@ -114,7 +122,7 @@ public class WebViewActivity extends AppCompatActivity
     }
 
     /**
-     * Called when the activity h as detected the user's press of the back
+     * Called when the activity has detected the user's press of the back
      * key. The {@link #getOnBackPressedDispatcher() OnBackPressedDispatcher} will be given a
      * chance to handle the back button before the default behavior of
      * {@link Activity#onBackPressed()} is invoked.
@@ -124,6 +132,61 @@ public class WebViewActivity extends AppCompatActivity
     @Override
     public void onBackPressed()
     {
+        webView.goBack();
         super.onBackPressed();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack())
+        {
+            webView.goBack();
+            return true;
+        }
+        else
+        {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * This hook is called whenever an item in THe options menu is selected.
+     * The default implementation simply returns false to have the normal
+     * processing happen (calling the item's Runnable or sending a message to
+     * its Handler as appropriate).  You can use this method for any items
+     * for which you would like to do processing without those other
+     * facilities.
+     *
+     * <p>Derived classes should call through to the base class for it to
+     * perform the default menu handling.</p>
+     *
+     * @param item The menu item that was selected.
+     * @return boolean Return false to allow normal menu processing to
+     * proceed, true to consume it here.
+     * @see #onCreateOptionsMenu
+     */
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item)
+    {
+        if (item.getItemId() == R.id.refresh)
+        {
+            Functions.log_output("menu_refresh/0", 0, LogLevel.DEBUG);
+
+            webView.reload();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.webview_item, menu);
+
+        return true;
     }
 }
