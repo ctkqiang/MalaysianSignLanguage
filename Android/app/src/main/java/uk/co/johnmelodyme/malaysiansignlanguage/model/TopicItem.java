@@ -28,11 +28,6 @@ public class TopicItem
     public int topic_image;
     public String topic_title;
 
-    public TopicItem(int topic_image, String topic_title)
-    {
-        this.topic_image = topic_image;
-        this.topic_title = topic_title;
-    }
 
     public int getTopic_image()
     {

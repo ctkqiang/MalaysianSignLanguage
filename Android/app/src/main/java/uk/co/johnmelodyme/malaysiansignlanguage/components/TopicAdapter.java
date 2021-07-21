@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -111,7 +112,9 @@ public class TopicAdapter extends BaseAdapter
         }
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.topic_image);
+        TextView textView = (TextView) convertView.findViewById(R.id.topic_title);
         imageView.setImageResource(data.get(position).getTopic_image());
+        textView.setText(data.get(position).getTopic_title());
 
         return convertView;
     }

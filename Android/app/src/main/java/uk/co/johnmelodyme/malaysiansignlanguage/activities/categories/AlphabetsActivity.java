@@ -4,8 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+
+import java.util.ArrayList;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
+import uk.co.johnmelodyme.malaysiansignlanguage.components.TopicAdapter;
+import uk.co.johnmelodyme.malaysiansignlanguage.constant.Constants;
+import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
+import uk.co.johnmelodyme.malaysiansignlanguage.functions.Functions;
+import uk.co.johnmelodyme.malaysiansignlanguage.model.TopicItem;
 
 /**
  * @author Johnmelodyme
@@ -29,11 +39,48 @@ import uk.co.johnmelodyme.malaysiansignlanguage.R;
 public class AlphabetsActivity extends AppCompatActivity
 {
 
+    public final LogLevel LOG_LEVEL = LogLevel.DEBUG;
+    public GridView gridView;
+    public TopicAdapter topicAdapter;
+    public ArrayList<TopicItem> topicItemArrayList;
+
+    public void render_user_components(Bundle bundle)
+    {
+        Functions.log_output("render_user_components/1", 0, LOG_LEVEL);
+
+        gridView = (GridView) findViewById(R.id.alphabet_layout);
+        topicItemArrayList = new ArrayList<>();
+
+        for (int i = 0; i < Constants.alphabet_image.length; i++)
+        {
+            TopicItem topicItem = new TopicItem();
+            topicItem.setTopic_image(Constants.alphabet_image[i]);
+            topicItem.setTopic_title(Constants.alphabets_title[i]);
+
+            topicItemArrayList.add(topicItem);
+        }
+
+        topicAdapter = new TopicAdapter(this, topicItemArrayList);
+        gridView.setAdapter(topicAdapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                // TODO DO Something here......
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabets);
+
+        /* Render User Components */
+        render_user_components(savedInstanceState);
     }
 
     @Override

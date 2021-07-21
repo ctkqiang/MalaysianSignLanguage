@@ -6,16 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".activities.ContentDisplayActivity">
 
-    <GridView
-        android:id="@+id/alphabet_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="3dp"
-        android:horizontalSpacing="10dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="10dp" />
-
 </RelativeLayout>

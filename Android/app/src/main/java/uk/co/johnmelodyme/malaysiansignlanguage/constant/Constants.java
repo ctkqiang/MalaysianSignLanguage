@@ -131,5 +131,32 @@ public class Constants
             "Z"
     };
 
-    public static int[] alphabet_image = {};
+    public static int[] alphabet_image = {
+            R.mipmap.a,
+            R.mipmap.b,
+            R.mipmap.c,
+            R.mipmap.d,
+            R.mipmap.e,
+            R.mipmap.f,
+            R.mipmap.g,
+            R.mipmap.h,
+            R.mipmap.i,
+            R.mipmap.j,
+            R.mipmap.k,
+            R.mipmap.l,
+            R.mipmap.m,
+            R.mipmap.n,
+            R.mipmap.o,
+            R.mipmap.p,
+            R.mipmap.q,
+            R.mipmap.r,
+            R.mipmap.s,
+            R.mipmap.t,
+            R.mipmap.u,
+            R.mipmap.v,
+            R.mipmap.w,
+            R.mipmap.x,
+            R.mipmap.y,
+            R.mipmap.z
+    };
 }
