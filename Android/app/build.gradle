@@ -31,6 +31,7 @@ android {
 println project.name
 
 final DEXTER_VERSION = '6.2.2'
+final GIF_IMAGE_VIEW = '1.2.19'
 
 dependencies {
 
@@ -42,4 +43,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation "com.karumi:dexter:${DEXTER_VERSION}"
+    implementation "pl.droidsonroids.gif:android-gif-drawable:${GIF_IMAGE_VIEW}"
 }

@@ -5,13 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
+import pl.droidsonroids.gif.GifImageView;
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
 import uk.co.johnmelodyme.malaysiansignlanguage.model.TopicItem;
 
@@ -111,7 +111,7 @@ public class TopicAdapter extends BaseAdapter
             convertView = LayoutInflater.from(context).inflate(R.layout.topic_itmes, parent, false);
         }
 
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.topic_image);
+        GifImageView imageView = (GifImageView) convertView.findViewById(R.id.topic_image);
         TextView textView = (TextView) convertView.findViewById(R.id.topic_title);
         imageView.setImageResource(data.get(position).getTopic_image());
         textView.setText(data.get(position).getTopic_title());

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/topic_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
