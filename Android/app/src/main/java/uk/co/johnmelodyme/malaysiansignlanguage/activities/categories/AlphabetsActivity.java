@@ -39,7 +39,6 @@ import uk.co.johnmelodyme.malaysiansignlanguage.model.TopicItem;
 
 public class AlphabetsActivity extends AppCompatActivity
 {
-
     public final LogLevel LOG_LEVEL = LogLevel.DEBUG;
     public GridView gridView;
     public TopicAdapter topicAdapter;
@@ -64,14 +63,6 @@ public class AlphabetsActivity extends AppCompatActivity
         topicAdapter = new TopicAdapter(this, topicItemArrayList);
         gridView.setAdapter(topicAdapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                // TODO DO Something here......
-            }
-        });
     }
 
     @Override

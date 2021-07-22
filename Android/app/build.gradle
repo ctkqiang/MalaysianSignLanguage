@@ -32,6 +32,7 @@ println project.name
 
 final DEXTER_VERSION = '6.2.2'
 final GIF_IMAGE_VIEW = '1.2.19'
+final GLIDER_VERSION = '4.9.0'
 
 dependencies {
 
@@ -44,4 +45,5 @@ dependencies {
 
     implementation "com.karumi:dexter:${DEXTER_VERSION}"
     implementation "pl.droidsonroids.gif:android-gif-drawable:${GIF_IMAGE_VIEW}"
+    implementation "com.github.bumptech.glide:glide:${GLIDER_VERSION}"
 }

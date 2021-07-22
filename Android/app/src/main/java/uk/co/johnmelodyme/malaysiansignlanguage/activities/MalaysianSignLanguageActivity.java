@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import uk.co.johnmelodyme.malaysiansignlanguage.R;
 import uk.co.johnmelodyme.malaysiansignlanguage.activities.categories.AlphabetsActivity;
+import uk.co.johnmelodyme.malaysiansignlanguage.activities.categories.NumbersActivity;
 import uk.co.johnmelodyme.malaysiansignlanguage.components.CategoryAdapter;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.Constants;
 import uk.co.johnmelodyme.malaysiansignlanguage.constant.LogLevel;
@@ -85,6 +86,7 @@ public class MalaysianSignLanguageActivity extends AppCompatActivity
 
                     case 1:
                     {
+                        Functions.route_to(context, NumbersActivity.class);
                         break;
                     }
 

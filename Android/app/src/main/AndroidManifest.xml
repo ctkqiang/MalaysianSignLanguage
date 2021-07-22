@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
-    <uses-permission android:name = "android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -22,6 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalaysianSignLanguage"
         tools:ignore="AllowBackup">
+        <activity android:name=".activities.categories.NumbersActivity"></activity>
         <activity android:name=".activities.ContentDisplayActivity" />
         <activity
             android:name=".activities.categories.AlphabetsActivity"

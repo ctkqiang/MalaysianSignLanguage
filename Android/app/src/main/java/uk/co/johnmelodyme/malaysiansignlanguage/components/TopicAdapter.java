@@ -5,9 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
@@ -62,6 +66,7 @@ public class TopicAdapter extends BaseAdapter
      *
      * @param position Position of the item whose data we want within the adapter's
      *                 data set.
+     *
      * @return The data at the specified position.
      */
     @Override
@@ -74,6 +79,7 @@ public class TopicAdapter extends BaseAdapter
      * Get the row id associated with the specified position in the list.
      *
      * @param position The position of the item within the adapter's data set whose row id we want.
+     *
      * @return The id of the item at the specified position.
      */
     @Override
@@ -101,6 +107,7 @@ public class TopicAdapter extends BaseAdapter
      *                    always of the right type (see {@link #getViewTypeCount()} and
      *                    {@link #getItemViewType(int)}).
      * @param parent      The parent that this view will eventually be attached to
+     *
      * @return A View corresponding to the data at the specified position.
      */
     @Override
@@ -111,9 +118,11 @@ public class TopicAdapter extends BaseAdapter
             convertView = LayoutInflater.from(context).inflate(R.layout.topic_itmes, parent, false);
         }
 
-        GifImageView imageView = (GifImageView) convertView.findViewById(R.id.topic_image);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.topic_image);
         TextView textView = (TextView) convertView.findViewById(R.id.topic_title);
-        imageView.setImageResource(data.get(position).getTopic_image());
+        Glide.with(convertView.getRootView()).load(data.get(position).getTopic_image())
+                .apply(RequestOptions.circleCropTransform())
+                .into(imageView);
         textView.setText(data.get(position).getTopic_title());
 
         return convertView;

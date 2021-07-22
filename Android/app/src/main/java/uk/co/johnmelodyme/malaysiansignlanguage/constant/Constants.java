@@ -159,4 +159,36 @@ public class Constants
             R.mipmap.y,
             R.mipmap.z
     };
+
+    public static String[] numbers_title = {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+    };
+
+
+    public static int[] numbers_image = {
+            R.mipmap.one,
+            R.mipmap.two,
+            R.mipmap.three,
+            R.mipmap.four,
+            R.mipmap.five,
+            R.mipmap.six,
+            R.mipmap.seven,
+            R.mipmap.eight,
+            R.mipmap.nine,
+            R.mipmap.ten,
+            R.drawable.eleven
+    };
+
+    // TODO add more assets
+
 }
