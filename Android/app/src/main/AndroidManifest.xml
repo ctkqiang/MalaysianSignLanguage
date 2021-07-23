@@ -22,8 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalaysianSignLanguage"
         tools:ignore="AllowBackup">
-        <activity android:name=".activities.categories.NumbersActivity"></activity>
-        <activity android:name=".activities.ContentDisplayActivity" />
+        <activity
+            android:name=".activities.categories.NumbersActivity"
+            android:parentActivityName=".activities.MalaysianSignLanguageActivity" />
+        <activity
+            android:name=".activities.ContentDisplayActivity"
+            android:parentActivityName=".activities.MalaysianSignLanguageActivity" />
         <activity
             android:name=".activities.categories.AlphabetsActivity"
             android:parentActivityName=".activities.MalaysianSignLanguageActivity" />

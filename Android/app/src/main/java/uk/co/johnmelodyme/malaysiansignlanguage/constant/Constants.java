@@ -171,7 +171,16 @@ public class Constants
             "8",
             "9",
             "10",
-            "11"
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
     };
 
 
@@ -186,7 +195,16 @@ public class Constants
             R.mipmap.eight,
             R.mipmap.nine,
             R.mipmap.ten,
-            R.drawable.eleven
+            R.drawable.eleven,
+            R.drawable.twelve,
+            R.drawable.thirteen,
+            R.drawable.fourteen,
+            R.drawable.fifteen,
+            R.drawable.sixteen,
+            R.drawable.seventeen,
+            R.drawable.eightteen,
+            R.drawable.nineteen,
+            R.drawable.twenty
     };
 
     // TODO add more assets

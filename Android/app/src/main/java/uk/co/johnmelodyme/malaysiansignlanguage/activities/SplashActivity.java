@@ -37,7 +37,6 @@ public class SplashActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
         /* Disable Dark Mode */
         ComponentFunctions.disable_dark_mode();
 
@@ -59,8 +58,10 @@ public class SplashActivity extends AppCompatActivity
             @Override
             public void run()
             {
-                ComponentFunctions.route_to(SplashActivity.this,
-                        MalaysianSignLanguageActivity.class);
+                ComponentFunctions.route_to(
+                        SplashActivity.this,
+                        MalaysianSignLanguageActivity.class)
+                ;
 
                 finish();
             }
