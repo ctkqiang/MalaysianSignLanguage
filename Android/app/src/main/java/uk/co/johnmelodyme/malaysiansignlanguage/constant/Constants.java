@@ -183,7 +183,6 @@ public class Constants
             "20"
     };
 
-
     public static int[] numbers_image = {
             R.mipmap.one,
             R.mipmap.two,
@@ -206,7 +205,4 @@ public class Constants
             R.drawable.nineteen,
             R.drawable.twenty
     };
-
-    // TODO add more assets
-
 }

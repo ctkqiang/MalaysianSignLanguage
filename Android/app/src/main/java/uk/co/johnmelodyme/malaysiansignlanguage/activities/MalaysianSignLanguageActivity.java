@@ -92,7 +92,8 @@ public class MalaysianSignLanguageActivity extends AppCompatActivity
 
                     default:
                     {
-                        ComponentFunctions.show_snack_bar(view, "?? ->" + position);
+                        // ComponentFunctions.show_snack_bar(view, "?? ->" + position);
+                         ComponentFunctions.show_snack_bar(view, "Coming Soon");
                         break;
                     }
 
